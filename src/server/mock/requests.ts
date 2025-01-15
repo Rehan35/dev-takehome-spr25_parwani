@@ -41,6 +41,8 @@ export function createNewMockRequest(request: any): MockItemRequest {
   if (!validatedRequest) {
     throw new InvalidInputError("created item request");
   }
+  console.log("Validated Request Name: " + validatedRequest.requestorName);
+  console.log("item requested: " + validatedRequest.itemRequested);
   const date = new Date();
   const newRequest: MockItemRequest = {
     id: generateMockId(mockItemRequests),
